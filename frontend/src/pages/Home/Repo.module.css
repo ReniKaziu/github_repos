@@ -1,0 +1,41 @@
+.container{
+    width:600px;
+    height:150px;
+    border:2px solid #eee;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 1rem;
+    margin: 0rem 0.5rem 2rem 2rem;
+    display: flex;
+    overflow: hidden;
+}
+
+.logo{
+    height: 100%;
+    width:20%;
+    border-right:2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  padding:1rem;
+}
+
+.first-row {
+   display: flex;
+   justify-content: space-between;
+   align-items: baseline;
+}
+
+.private {
+    border:2px solid black;
+    height:1rem;
+    border-radius: 8px;
+    padding:0.5rem;
+    background-color: #eee;
+}
+

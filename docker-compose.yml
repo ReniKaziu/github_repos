@@ -1,0 +1,36 @@
+version: "3.3"
+
+volumes:
+  db:
+
+services:
+  db:
+    container_name: "github_repos_db"
+    image: mysql:8.0
+    restart: always
+    volumes:
+      - db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: admin321
+      MYSQL_DATABASE: github_repos_db
+    ports:
+      - 3307:3306
+
+  api:
+    build: ./backend
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      CLIENT_ID: 4833e5df785b55a758b1
+      CLIENT_SECRET: 550134763f6615f2519b1e0273c3d12fd1776bb8
+    depends_on:
+      - db
+
+  client:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api

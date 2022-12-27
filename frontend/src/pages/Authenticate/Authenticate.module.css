@@ -1,0 +1,36 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fdfdfd;
+}
+
+.card {
+    width:20rem;
+    border:2px solid #eee;
+    border-radius: 1rem;
+    height:15rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.card div button {
+    padding: 0.25rem 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    border: 2px solid black;
+    color: black;
+    font-weight: bolder;
+    display:flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card div button span {
+    margin-left:0.25rem;
+}
+
